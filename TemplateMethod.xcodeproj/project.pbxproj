@@ -10,8 +10,7 @@
 		BA6252241D98ECCD0012AC82 /* AbstractSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6252231D98ECCD0012AC82 /* AbstractSorter.swift */; };
 		BA6252281D98EE5E0012AC82 /* QuickSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6252271D98EE5E0012AC82 /* QuickSorter.swift */; };
 		BA62522A1D98EE800012AC82 /* MergeSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6252291D98EE800012AC82 /* MergeSorter.swift */; };
-		BA62522C1D98EEA50012AC82 /* SorterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA62522B1D98EEA50012AC82 /* SorterFactory.swift */; };
-		BA62522F1D99B1AA0012AC82 /* SortMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA62522D1D99A82B0012AC82 /* SortMan.swift */; };
+		BA6252351D9A7A050012AC82 /* SorterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6252341D9A7A050012AC82 /* SorterFactory.swift */; };
 		BACEC3D31D983D4000F56CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC3D21D983D4000F56CAA /* AppDelegate.swift */; };
 		BACEC3D51D983D4000F56CAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC3D41D983D4000F56CAA /* ViewController.swift */; };
 		BACEC3D81D983D4000F56CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACEC3D61D983D4000F56CAA /* Main.storyboard */; };
@@ -23,8 +22,7 @@
 		BA6252231D98ECCD0012AC82 /* AbstractSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AbstractSorter.swift; path = Sort/AbstractSorter.swift; sourceTree = "<group>"; };
 		BA6252271D98EE5E0012AC82 /* QuickSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuickSorter.swift; path = Sort/QuickSorter.swift; sourceTree = "<group>"; };
 		BA6252291D98EE800012AC82 /* MergeSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MergeSorter.swift; path = Sort/MergeSorter.swift; sourceTree = "<group>"; };
-		BA62522B1D98EEA50012AC82 /* SorterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SorterFactory.swift; sourceTree = "<group>"; };
-		BA62522D1D99A82B0012AC82 /* SortMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SortMan.swift; path = Sort/SortMan.swift; sourceTree = "<group>"; };
+		BA6252341D9A7A050012AC82 /* SorterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SorterFactory.swift; sourceTree = "<group>"; };
 		BACEC3CF1D983D4000F56CAA /* TemplateMethod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemplateMethod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACEC3D21D983D4000F56CAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACEC3D41D983D4000F56CAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +49,6 @@
 				BA6252231D98ECCD0012AC82 /* AbstractSorter.swift */,
 				BA6252271D98EE5E0012AC82 /* QuickSorter.swift */,
 				BA6252291D98EE800012AC82 /* MergeSorter.swift */,
-				BA62522D1D99A82B0012AC82 /* SortMan.swift */,
 			);
 			name = Sort;
 			sourceTree = "<group>";
@@ -78,7 +75,7 @@
 				BA6252221D98EC750012AC82 /* Sort */,
 				BACEC3D21D983D4000F56CAA /* AppDelegate.swift */,
 				BACEC3D41D983D4000F56CAA /* ViewController.swift */,
-				BA62522B1D98EEA50012AC82 /* SorterFactory.swift */,
+				BA6252341D9A7A050012AC82 /* SorterFactory.swift */,
 				BACEC3D61D983D4000F56CAA /* Main.storyboard */,
 				BACEC3D91D983D4000F56CAA /* Assets.xcassets */,
 				BACEC3DB1D983D4000F56CAA /* LaunchScreen.storyboard */,
@@ -159,11 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA6252241D98ECCD0012AC82 /* AbstractSorter.swift in Sources */,
-				BA62522C1D98EEA50012AC82 /* SorterFactory.swift in Sources */,
+				BA6252351D9A7A050012AC82 /* SorterFactory.swift in Sources */,
 				BA6252281D98EE5E0012AC82 /* QuickSorter.swift in Sources */,
 				BACEC3D51D983D4000F56CAA /* ViewController.swift in Sources */,
 				BA62522A1D98EE800012AC82 /* MergeSorter.swift in Sources */,
-				BA62522F1D99B1AA0012AC82 /* SortMan.swift in Sources */,
 				BACEC3D31D983D4000F56CAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

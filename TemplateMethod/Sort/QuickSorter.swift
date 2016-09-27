@@ -25,7 +25,10 @@ class QuickSorter: AbstractSorter {
     }
     
     override func combine(input : [Int], outputs: [[Int]]) -> [Int]{
-        return []
+        
+        var arrayToSort = input
+        quick_sort(&arrayToSort)
+        return arrayToSort
     }
     
     func quick_sort(inout data: [Int]){
