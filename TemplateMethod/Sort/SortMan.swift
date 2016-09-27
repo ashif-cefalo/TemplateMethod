@@ -45,28 +45,33 @@ class SortMan {
     }
 
     func divide(array : [Int]) -> [[Int]]{
+
+        let low = 0
+        let high = array.count
+        var input = array
+        let pivot = input[low]
+        var sp = low
         
-        if array.count > 1{
-            let low = 0
-            let high = array.count - 1
-            var input = array
-            let pivot = input[low]
-            var sp = low
-            
-            for i in 1..<high{
-                if input[i] < pivot{
-                    swapValues(input, low: sp, high: i)
-                    sp += 1
-                }
+        for i in low+1..<high{
+            if input[i] < pivot{
+                swapValues(&input, low: ++sp, high: i)
             }
-            
-            swapValues(input, low: low, high: sp)
-            
-            let less = Array(input[low..<sp])
-            let greater = Array(input[sp..<array.count-1])
-            return[less, greater]
         }
-        return [array]
+        
+        swapValues(&input, low: low, high: sp)
+        
+        var left = [Int]()
+        var right = [Int]()
+        
+        for x in low..<sp{
+            left.append(input[x])
+        }
+        
+        for y in sp..<high{
+            right.append(array[y])
+        }
+        
+        return[left, right]
     }
     
     func conquer() {
@@ -84,7 +89,7 @@ class SortMan {
      the same memory location. This little wrapper simply ignores such swaps.
      */
     
-    private func swapValues(array: [Int], low: Int, high: Int){
+    private func swapValues(inout array: [Int], low: Int, high: Int){
         var arrayToSwap = array
         let temp = arrayToSwap[low]
         arrayToSwap[low] = arrayToSwap[high]

@@ -16,6 +16,7 @@ class QuickSorter: AbstractSorter {
     */
     
     override func divide(array : [Int]) -> [[Int]]{
+        
         return []
     }
     
