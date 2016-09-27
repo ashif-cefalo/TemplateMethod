@@ -36,12 +36,12 @@ class MergeSorter: AbstractSorter {
         
     }
     
-    override func combine(input : [Int], outputs: [[Int]]) -> [Int]{
+    override func combine(sourceArray : [Int], splits: [[Int]]) -> [Int]{
         var result = [Int]()
         
         // Merge taking lowest value first seen
-        var left = outputs[0]
-        var right = outputs[1]
+        var left = splits[0]
+        var right = splits[1]
         
         while (!left.isEmpty && !right.isEmpty){
             if left[0] <= right[0]{

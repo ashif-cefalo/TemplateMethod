@@ -23,19 +23,19 @@ class AbstractSorter {
     func sort(array: [Int]) ->[Int]{
         
         var arrayToDivide = [[Int]]()
-        if array.count <= 1{
+        
+        guard array.count > 1 else{
             return array
         }
-        else {
-            arrayToDivide = divide(array);
-        }
+        
+        arrayToDivide = divide(array);
         
         var splittedArray = [[Int]]()
         for x in 0..<arrayToDivide.count{
             splittedArray.append(sort(arrayToDivide[x]))
         }
         
-        return combine(array, outputs: splittedArray)
+        return combine(array, splits: splittedArray)
     }
     
     internal func divide(array : [Int]) -> [[Int]]{
@@ -46,7 +46,7 @@ class AbstractSorter {
     
     }
     
-    internal func combine(input : [Int], outputs: [[Int]]) -> [Int]{
+    internal func combine(sourceArray : [Int], splits: [[Int]]) -> [Int]{
         return []
     }
 }
