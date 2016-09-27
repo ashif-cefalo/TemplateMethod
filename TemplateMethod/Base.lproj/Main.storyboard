@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TemplateMethod" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1,2,3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTh-b4-Nzu">
+                                <rect key="frame" x="20" y="40" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eeH-ec-Lnb">
+                                <rect key="frame" x="246" y="143" width="107" height="29"/>
+                                <segments>
+                                    <segment title="Merge"/>
+                                    <segment title="Quick"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq7-lb-Kmb">
+                                <rect key="frame" x="50" y="199" width="500" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NSM-d3-uui"/>
+                                </constraints>
+                                <state key="normal" title="Sort"/>
+                                <connections>
+                                    <action selector="sortButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lGS-cu-bpa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input numbers seperated by comma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-Q7-QF3">
+                                <rect key="frame" x="20" y="98" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xaX-jH-e40"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eeH-ec-Lnb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9QM-sB-KdK"/>
+                            <constraint firstAttribute="trailing" secondItem="iq7-lb-Kmb" secondAttribute="trailing" constant="50" id="ETA-Ch-zDx"/>
+                            <constraint firstItem="iq7-lb-Kmb" firstAttribute="top" secondItem="eeH-ec-Lnb" secondAttribute="bottom" constant="28" id="Kgm-rS-4VM"/>
+                            <constraint firstAttribute="trailing" secondItem="XTh-b4-Nzu" secondAttribute="trailing" constant="20" id="MwK-DM-DNm"/>
+                            <constraint firstItem="XTh-b4-Nzu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="a2C-NJ-Gos"/>
+                            <constraint firstItem="HfM-Q7-QF3" firstAttribute="top" secondItem="XTh-b4-Nzu" secondAttribute="bottom" constant="28" id="cAu-A3-hbP"/>
+                            <constraint firstItem="eeH-ec-Lnb" firstAttribute="top" secondItem="HfM-Q7-QF3" secondAttribute="bottom" constant="24" id="cpR-zh-azl"/>
+                            <constraint firstAttribute="trailing" secondItem="HfM-Q7-QF3" secondAttribute="trailing" constant="20" id="fWv-bt-aq5"/>
+                            <constraint firstItem="XTh-b4-Nzu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="fts-3I-Imq"/>
+                            <constraint firstItem="iq7-lb-Kmb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="wyZ-93-aP0"/>
+                            <constraint firstItem="HfM-Q7-QF3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="xRA-xb-BLV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="XTh-b4-Nzu" id="8gQ-aV-0QY"/>
+                        <outlet property="sortOptionSegmentControl" destination="eeH-ec-Lnb" id="a1E-t2-MLt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="348"/>
+        </scene>
+    </scenes>
+</document>
